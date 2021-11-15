@@ -4,8 +4,8 @@ const path = require("path");
 
 // router.post("/api/workout", ({ body }, res) => {
 //   Workout.create(body)
-//     .then(dbWorkout => {
-//       res.json(dbWorkout);
+//     .then(dbworkout => {
+//       res.json(dbworkout);
 //     })
 //     .catch(err => {
 //       res.status(400).json(err);
@@ -14,8 +14,8 @@ const path = require("path");
 
 // router.post("/api/workout/bulk", ({ body }, res) => {
 //   Workout.insertMany(body)
-//     .then(dbWorkout => {
-//       res.json(dbWorkout);
+//     .then(dbworkout => {
+//       res.json(dbworkout);
 //     })
 //     .catch(err => {
 //       res.status(400).json(err);
@@ -36,8 +36,8 @@ router.get("/stats", (req, res) => {
 
 
 //   .sort({ date: -1 })
-//     .then(dbWorkout => {
-//       res.json(dbWorkout);
+//     .then(dbworkout => {
+//       res.json(dbworkout);
 //     })
 //     .catch(err => {
 //       res.status(400).json(err);

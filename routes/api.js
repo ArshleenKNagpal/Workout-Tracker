@@ -4,8 +4,8 @@ const Workout = require("../models/workout.js");
     //create workout post
 router.post("/api/workouts", ( req, res) => {
   Workout.create()
-    .then(dbWorkout => {
-      res.json(dbWorkout);
+    .then(dbworkout => {
+      res.json(dbworkout);
     })
     .catch(err => {
       res.status(400).json(err);
@@ -14,8 +14,8 @@ router.post("/api/workouts", ( req, res) => {
 
 // router.post("/api/workout/bulk", ({ body }, res) => {
 //   Workout.insertMany(body)
-//     .then(dbWorkout => {
-//       res.json(dbWorkout);
+//     .then(dbworkout => {
+//       res.json(dbworkout);
 //     })
 //     .catch(err => {
 //       res.status(400).json(err);
@@ -26,8 +26,8 @@ router.post("/api/workouts", ( req, res) => {
 router.get("/api/workout", (req, res) => {
   Workout.find({})
     // .sort({ date: -1 })
-    .then(dbWorkout => {
-      res.json(dbWorkout);
+    .then(dbworkout => {
+      res.json(dbworkout);
     })
     .catch(err => {
       res.status(400).json(err);
@@ -42,8 +42,8 @@ router.put("/api/workout/:id", (req, res) => {
       $push: { exercises: req.body },
     })
     // .sort({ date: -1 })
-    .then(dbWorkout => {
-      res.json(dbWorkout);
+    .then(dbworkout => {
+      res.json(dbworkout);
     })
     .catch(err => {
       res.status(400).json(err);
