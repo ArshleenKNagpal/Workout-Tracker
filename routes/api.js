@@ -12,6 +12,19 @@ router.post("/api/workouts", ( req, res) => {
     });
 });
 
+router.get("/api/workouts/range", (req, res) => {
+  Workout.find({})
+
+      .then(dbworkout => {
+          res.json(dbworkout);
+      })
+      .catch(err => {
+          res.status(400).json(err);
+      });
+});
+
+
+
 // router.post("/api/workout/bulk", ({ body }, res) => {
 //   Workout.insertMany(body)
 //     .then(dbworkout => {
@@ -23,7 +36,7 @@ router.post("/api/workouts", ( req, res) => {
 // });
 
     //get workout posts
-router.get("/api/workout", (req, res) => {
+router.get("/api/workouts", (req, res) => {
   Workout.find({})
     // .sort({ date: -1 })
     .then(dbworkout => {
@@ -35,8 +48,9 @@ router.get("/api/workout", (req, res) => {
 });
 
 
+
 // add workout put
-router.put("/api/workout/:id", (req, res) => {
+router.put("/api/workouts/:id", (req, res) => {
   Workout.findByIdAndUpdate(req.params.id,
     {
       $push: { exercises: req.body },
@@ -52,3 +66,9 @@ router.put("/api/workout/:id", (req, res) => {
 
 
 module.exports = router;
+
+
+
+
+
+
