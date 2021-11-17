@@ -3,7 +3,7 @@ const Workout = require("../models/workout.js");
 
     //create workout post
 router.post("/api/workouts", ( req, res) => {
-  Workout.create()
+  Workout.create({})
     .then(dbworkout => {
       res.json(dbworkout);
     })
